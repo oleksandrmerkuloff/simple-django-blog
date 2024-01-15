@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+    <link rel="stylesheet" href="{% static "blog/home_page.css"%}">
+{% endblock %}
+
+{% block body %}
+
+    <section id="welcome">
+        <header>
+            <img src="{% static "blog/images/oleksandr.jpg" %}" alt="Oleksandr - The Author Of This Blog">
+            <h2>Oleksandr's Blog</h2>
+        </header>
+        <p>Hi, it's simple Django blog</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My latest Thoughts</h2>
+        <ul>
+            {% for post in posts %}
+                {% include "blog/includes/post.html" %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>
+            What I Do
+        </h2>
+        <p>
+            Breakfast arranging he if furniture we described on. Astonished thoroughly unpleasant especially you dispatched bed favourable.
+        </p>
+        <p>
+            Proposal indulged no do do sociable he throwing settling. Covered ten nor comfort offices carried.
+        </p>
+    </section>
+{% endblock %}

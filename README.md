@@ -1,0 +1,1 @@
+This simple blog was written by me while learning Django, it is not perfect, but here are implemented posts, comments on them, work with admin and models, in addition, a small design for the site was created.
